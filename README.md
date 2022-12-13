@@ -1,1 +1,5 @@
-# ts-rest-api
+## Description
+
+---
+
+RESTful API created using TypeScript

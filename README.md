@@ -1,1 +1,1 @@
-# ts-rest
+# ts-rest-api

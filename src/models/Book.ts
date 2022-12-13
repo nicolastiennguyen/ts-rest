@@ -13,8 +13,7 @@ const BookSchema: Schema = new Schema(
         author: { type: Schema.Types.ObjectId, required: true, ref: 'Author' }
     },
     {
-        timestamps: true,
-        versionKey: true
+        timestamps: true
     }
 );
 

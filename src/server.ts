@@ -51,7 +51,7 @@ const StartServer = () => {
     });
 
     /* Routes */
-    router.use('/authors/', authorRoutes);
+    router.use('/authors', authorRoutes);
 
     /* Healthcheck to make sure API is working */
     router.get('/ping', (req, res, next) => {

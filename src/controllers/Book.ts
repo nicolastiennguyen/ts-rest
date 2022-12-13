@@ -17,12 +17,16 @@ const createBook = (req: Request, res: Response, next: NextFunction) => {
 const readBook = (req: Request, res: Response, next: NextFunction) => {
     const bookId = req.params.bookId;
     return Book.findById(bookId)
+        .populate('author')
+        .select('-__v')
         .then((book) => (book ? res.status(200).json({ book }) : res.status(404).json({ message: 'not found' })))
         .catch((error) => res.status(500).json({ error }));
 };
 
 const readAll = (req: Request, res: Response, next: NextFunction) => {
     return Book.find()
+        .populate('author')
+        .select('-__v')
         .then((books) => res.status(200).json({ books }))
         .catch((error) => res.status(500).json({ error }));
 };
